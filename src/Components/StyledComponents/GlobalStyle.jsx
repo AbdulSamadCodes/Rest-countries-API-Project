@@ -13,102 +13,106 @@ const GlobalStyle = createGlobalStyle`
   }
 
   *,
- *::after,
- *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
- }
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } 
 
- *::before,
- *::after {
-   content: "";
-   position: absolute;
- }
+   *::before,
+   *::after {
+     content: "";
+     position: absolute;
+   }
 
- li {
-   list-style: none;
- }
+   li {
+     list-style: none;
+    }
 
- a {
-   text-decoration: none;
-   color: inherit;
- }
+   a {
+     text-decoration: none;
+     color: inherit;
+   }
 
- button {
-   cursor: pointer;
- }
+   button {
+     cursor: pointer;
+   }
  
- button,
- a,
- input {
-   display: block;
- }
+   button,
+   a,
+   input {
+     display: block;
+   }
 
- img {
+   img {
     max-width: 100%;
     display: block;
-   height: auto;
-   object-fit:cover;
-   object-position:center;
+    height: auto;
+    object-fit:cover;
+    object-position:center;
  }
 
- button,
- input {
-   background: none;
-   border: none;
-   outline: none;
- }
+   button,
+   input {
+     background: none;
+     border: none;
+     outline: none;
+   }
 
- form,
- input,
- button,
- select,
- option,
- textarea {
-  font: inherit;
-  color:inherit;
- }
+   form,
+   input,
+   button,
+   select,
+   option,
+   textarea {
+    font: inherit;
+    color:inherit;
+   }
 
- input {
-   font-size: 1.2rem;
- }
+   input {
+     font-size: 1.2rem;
+   }
 
- input:focus-visible {
-   outline: none;
- }
+   input:focus-visible {
+     outline: none;
+   }
 
- :focus-visible {    
-   outline: 1px solid hsla(0, 0%, 0%, 0.4);
-   outline-offset: 0.4rem;
- }
+   :focus-visible {    
+     outline: 1px solid hsla(0, 0%, 0%, 0.4);
+     outline-offset: 0.4rem;
+   }
 
- html {
-   scroll-behavior: smooth;
-   scroll-padding-top: 3rem;
-   scrollbar-width: thin;
-   font-size:62.5%; 
- }
+   html {
+     scroll-behavior: smooth;
+     scroll-padding-top: 3rem;
+     scrollbar-width: thin;
+     font-size:62.5%; 
+   }
 
- body {
-    background-color:hsl(207, 26%, 17%);
-    color: hsl(0, 0%, 100%);
-    font-family:var(--ff-Nunito_sans);
-    font-size:1.5rem;
-    display:grid;
-  }
+   body {
+     background-color:hsl(207, 26%, 17%);
+     color: hsl(0, 0%, 100%);
+     font-family:var(--ff-Nunito_sans);
+     font-size:1.5rem;
+     display:grid;
+   }
 
-  .fw-bold {
-    font-weight:var(--fw-bold);
-  }
+   .fw-bold {
+     font-weight:var(--fw-bold);
+   }
 
-  .shadow-dark {
-    box-shadow : var(--shadow-dark);
-  }
+   .shadow-dark {
+     box-shadow : var(--shadow-dark);
+   }
 
-  .component {
-    background-color:var(--bg-component);
-  }
+    .mx-auto {
+      margin-inline:auto;
+    }
+
+    .component {
+      background-color:var(--bg-component);
+    }
 `
 
 export { GlobalStyle };

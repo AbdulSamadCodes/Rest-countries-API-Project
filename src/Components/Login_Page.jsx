@@ -43,7 +43,7 @@ function LoginPage() {
         <Input id='password'/>
       </div>
 
-    <Button classes='login-btn fw-bold shadow-dark' text='Login'/>
+    <Button classes='login-btn fw-bold shadow-dark mx-auto' text='Login'/>
 
     </StyledLoginPage>
   )

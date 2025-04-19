@@ -5,7 +5,7 @@ const StyledButton = styled.button`
   & {
      display: grid;
      place-content: center;  
-     padding:1rem 2.3rem; 
+     padding:0.9rem 2.5rem; 
      width:max-content;
      border-radius:0.3rem;    
   }
