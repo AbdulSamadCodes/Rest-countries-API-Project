@@ -13,7 +13,7 @@ const StyledButton = styled.button`
 
 function Button({ text , classes }) {
 
-  return <StyledButton className={classes}>
+  return <StyledButton type="submit" className={classes}>
     {text}
   </StyledButton>
 } 

@@ -1,4 +1,6 @@
 import React from 'react';
+import { useState } from 'react';
+
 import styled from 'styled-components';
 
 const StyledInput = styled.input`
@@ -10,10 +12,25 @@ const StyledInput = styled.input`
   };
 `;
 
-function Input( { placeholder , icon, id }  ) {
-  return <StyledInput type='text' className = 'shadow-dark' id = {id}>
-    
-  </StyledInput>
+function Input( { placeholder , icon, id, name }  ) {
+  const [ inputValue, setInputValue ] = useState('');
+  
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  }
+
+  return(
+  
+    <StyledInput type='text' 
+     className = 'shadow-dark' 
+     id = {id}
+     name={name}   
+     value = { inputValue} 
+     onChange={handleChange}
+     >
+
+    </StyledInput>
+  )
 };
 
 export { Input };

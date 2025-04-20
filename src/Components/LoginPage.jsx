@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styled from 'styled-components';
 import { Input } from '/src/Components/StyledComponents/Input.jsx';
 import { Button } from '/src/Components/StyledComponents/Button.jsx';
@@ -12,22 +13,21 @@ const Container = styled.div`
     }
 `;
 
-
 const StyledLoginPage = styled.div`
   & {
       border-radius:0.4rem;
-      gap:4rem;
       margin-inline:auto;
       padding:2rem; 
       width: min(35rem , calc(100%));
       align-self:center;
-  }
-    
-  & , & > .input-container {
-    display: grid; 
-  }
+    }
+      
+  & .login-form, &  .input-container {
+      display: grid; 
+      gap:4rem;
+   }
 
-  & > .input-container {
+  & .input-container {
     gap : 1rem;
   }
 `;
@@ -35,23 +35,28 @@ const StyledLoginPage = styled.div`
 function LoginPage() {
 
   return (
-
     <Container>
 
       <StyledLoginPage className='login-page component'>
-        <div className='input-container'>
-          <label className='fw-bold' htmlFor='username'>
-            Enter username:
-          </label>
-          <Input id='username' />
-        </div>
-        <div className='input-container'>
-          <label className='fw-bold' htmlFor='password'>
-            Enter password:
-          </label>
-          <Input id='password' />
-        </div>
-        <Button classes='login-btn fw-bold shadow-dark mx-auto' text='Login' />
+
+        <form action="" className='login-form'>
+
+          <div className='input-container'>
+            <label className='fw-bold' htmlFor='username'>
+              Enter username:
+            </label>
+
+            <Input id='username' name='username'/>
+          </div>
+          <div className='input-container'>
+            <label className='fw-bold' htmlFor='password'>
+              Enter password:
+            </label>
+            <Input id='password' name='password'/>
+          </div>
+          <Button classes='login-btn fw-bold shadow-dark mx-auto' text='Login' />
+        </form>
+
       </StyledLoginPage>
 
     </Container>
