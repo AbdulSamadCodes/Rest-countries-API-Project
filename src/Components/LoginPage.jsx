@@ -1,6 +1,9 @@
 import React from 'react';
+import { useState } from 'react';
 
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
+
 import { Input } from '/src/Components/StyledComponents/Input.jsx';
 import { Button } from '/src/Components/StyledComponents/Button.jsx';
 
@@ -33,28 +36,60 @@ const StyledLoginPage = styled.div`
 `;
 
 function LoginPage() {
+  const [ userName, setUserName ] = useState('');
+  const [ password, setPassword ] = useState('');
+  
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if(userName !== 'Samad' || password !== '123') {
+      alert('Wrong credentials');
+
+      return;
+    }
+
+    navigate('dashboard');
+  }
+  console.log('rerendered');
 
   return (
     <Container>
 
       <StyledLoginPage className='login-page component'>
 
-        <form action="" className='login-form'>
+        <form action="" className='login-form' onSubmit={handleSubmit}>
 
           <div className='input-container'>
             <label className='fw-bold' htmlFor='username'>
               Enter username:
             </label>
 
-            <Input id='username' name='username'/>
+            <Input 
+             id='username' 
+              name='username'
+              value = {userName}
+              setValue = {setUserName}
+            />
+
           </div>
+
           <div className='input-container'>
             <label className='fw-bold' htmlFor='password'>
               Enter password:
             </label>
-            <Input id='password' name='password'/>
+            <Input 
+             id='password' 
+             name='password'
+             value={password}   
+             setValue={setPassword}
+            />
           </div>
-          <Button classes='login-btn fw-bold shadow-dark mx-auto' text='Login' />
+
+          <Button classes='login-btn fw-bold shadow-dark mx-auto' 
+           text='Login' />
+
         </form>
 
       </StyledLoginPage>

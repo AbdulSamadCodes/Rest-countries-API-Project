@@ -4,10 +4,12 @@ function Header() {
 
   return (
 
-    <header>
-      <h2 className='text-primary'>Where in the world</h2>
+    <header className='header component' >
+      <h2 className='text-primary'>
+        Where in the world
+      </h2>
     </header>
-    
+
   );
 }
 
