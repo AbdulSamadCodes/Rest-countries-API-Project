@@ -1,16 +1,12 @@
 import React from 'react';
 
-import { Header } from '/src/Components/Header.jsx';
-import { Outlet } from 'react-router-dom';
+import { SearchInput } from '/src/Components/Dashboard/SearchInput.jsx';
 
 function Dashboard() {
-
+  
   return (
     <div className='dashboard'>
-
-      <Header/>
-      <Outlet />
-
+        <SearchInput />    
     </div>
   );
 }

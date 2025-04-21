@@ -52,10 +52,8 @@ function LoginPage() {
 
     navigate('dashboard');
   }
-  console.log('rerendered');
 
   return (
-    <Container>
 
       <StyledLoginPage className='login-page component'>
 
@@ -68,6 +66,7 @@ function LoginPage() {
 
             <Input 
              id='username' 
+             className={'shadow-dark'}
               name='username'
               value = {userName}
               setValue = {setUserName}
@@ -79,8 +78,10 @@ function LoginPage() {
             <label className='fw-bold' htmlFor='password'>
               Enter password:
             </label>
+            
             <Input 
              id='password' 
+             className={'shadow-dark'}
              name='password'
              value={password}   
              setValue={setPassword}
@@ -94,8 +95,7 @@ function LoginPage() {
 
       </StyledLoginPage>
 
-    </Container>
   )
 }
 
-export { LoginPage };
+export { LoginPage , Container };

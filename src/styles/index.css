@@ -1,8 +1,13 @@
 /* Header */
 
 .header {
-  position: fixed;
-  width:100%;
-  padding:0.8rem 1rem;
+  position:fixed;
+  padding:3rem 1rem;
   text-align:center;
+  right:0;
+  left:0;  
+}
+
+.dashboard {
+  padding-block-start:12rem;
 }

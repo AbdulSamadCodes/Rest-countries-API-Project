@@ -4,14 +4,15 @@ import styled from 'styled-components';
 
 const StyledInput = styled.input`
   & {
-    max-width:100%;
+    
+    width:min(100%,35rem);
     border-radius:0.2rem;
-    padding:1.2rem 0.8rem;
+    padding:1.5rem 0.8rem;
     border-radius:0.4rem;
   };
 `;
 
-function Input( {  id, name, value, setValue }  ) {
+function Input( {  id, className ,  name, value, setValue, placeholder , children }  ) {
 
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -20,13 +21,14 @@ function Input( {  id, name, value, setValue }  ) {
   return(
   
     <StyledInput type='text' 
-     className = 'shadow-dark' 
+     className =  {className}
      id = {id}
      name={name}   
      value = { value} 
      onChange={handleChange}
+     placeholder={placeholder}
      >
-
+      { children }
     </StyledInput>
   )
 };
