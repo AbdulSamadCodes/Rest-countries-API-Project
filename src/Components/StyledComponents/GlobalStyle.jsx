@@ -5,9 +5,12 @@ const GlobalStyle = createGlobalStyle`
   :root {
     --ff-Nunito_sans : "Nunito Sans", sans-serif;
     --fw-bold:bold;
+    --fs-normal: 1.4rem;
     --fs-text-primary:2.5rem;
-    
+
     --bg-component :hsl(209, 23%, 22%);
+
+    --clr-primary: hsl(0, 0%, 100%);
 
     --shadow-dark:3px 3px 3px hsla(0,0%,0%,0.2) , 
                -2px -2px 4px hsla(0,0%,0%,0.2);;
@@ -75,6 +78,11 @@ const GlobalStyle = createGlobalStyle`
      font-size: 1.2rem;
    }
 
+   input::placeholder {
+    color:var(--clr-primary);
+    font-size: var(--fs-normal);
+   }
+
    input:focus-visible {
      outline: none;
    }
@@ -93,9 +101,9 @@ const GlobalStyle = createGlobalStyle`
 
    body {
      background-color:hsl(207, 26%, 17%);
-     color: hsl(0, 0%, 100%);
+     color:var(--clr-primary);
      font-family:var(--ff-Nunito_sans);
-     font-size:1.5rem;
+     font-size:var(--fs-normal);
      display:grid;
    }
 

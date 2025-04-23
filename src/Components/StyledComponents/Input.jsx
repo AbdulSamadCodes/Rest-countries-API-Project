@@ -12,7 +12,7 @@ const StyledInput = styled.input`
   };
 `;
 
-function Input( {  id, className ,  name, value, setValue, placeholder , children }  ) {
+function Input( {  id, className , name, value, setValue, placeholder , children }  ) {
 
   const handleChange = (event) => {
     setValue(event.target.value);
