@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
   :root {
     --ff-Nunito_sans : "Nunito Sans", sans-serif;
     --fw-bold:bold;
-    --fs-normal: 1.4rem;
+    --fs-normal: 1.3rem;
     --fs-text-primary:2.5rem;
 
     --bg-component :hsl(209, 23%, 22%);

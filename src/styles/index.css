@@ -4,10 +4,29 @@
   position:fixed;
   padding:3rem 1rem;
   text-align:center;
-  right:0;
   left:0;  
+  right:0;
 }
+
+/* Dashboard */
 
 .dashboard {
   padding-block-start:12rem;
 }
+
+.search-input {
+  padding-inline-start:5rem !important;
+}
+
+.search-input-container {
+  display:block;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left:5%;
+  top:50%;
+  transform:translateY(-50%);
+}
+

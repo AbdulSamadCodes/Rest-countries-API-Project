@@ -7,12 +7,15 @@ const StyledInput = styled.input`
     
     width:min(100%,35rem);
     border-radius:0.2rem;
-    padding:1.5rem 0.8rem;
+    padding:1.5rem 1.2rem;
     border-radius:0.4rem;
   };
 `;
 
-function Input( {  id, className , name, value, setValue, placeholder , children }  ) {
+function Input( {  
+  id, className , name, 
+  placeholder ,  value, 
+  setValue }  ) {
 
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -28,7 +31,6 @@ function Input( {  id, className , name, value, setValue, placeholder , children
      onChange={handleChange}
      placeholder={placeholder}
      >
-      { children }
     </StyledInput>
   )
 };
