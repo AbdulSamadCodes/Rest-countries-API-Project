@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
 
     --bg-component :hsl(209, 23%, 22%);
 
-    --clr-primary: hsl(0, 0%, 100%);
+    --clr-white: hsl(0, 0%, 100%);
 
     --shadow-dark:3px 3px 3px hsla(0,0%,0%,0.2) , 
                -2px -2px 4px hsla(0,0%,0%,0.2);;
@@ -101,7 +101,7 @@ const GlobalStyle = createGlobalStyle`
 
    body {
      background-color:hsl(207, 26%, 17%);
-     color:var(--clr-primary);
+     color:var(--clr-white);
      font-family:var(--ff-Nunito_sans);
      font-size:var(--fs-normal);
      display:grid;
@@ -124,6 +124,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .text-primary {
+      color: var(--clr-white)
       font-size: var(--fs-text-primary);
     }
 `
