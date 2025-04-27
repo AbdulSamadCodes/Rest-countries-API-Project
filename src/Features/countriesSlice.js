@@ -11,12 +11,9 @@ const countriesSlice = createSlice({
   initialState: initialState,
 
   reducers: {
-     selectCountry: (state, action) => {
-        
-     }
-   }
+
+  }
  }
 );
 
 export const countriesReducer = countriesSlice.reducer;
-export const { selectCountry } = countriesSlice.actions;
