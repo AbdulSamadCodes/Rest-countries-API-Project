@@ -7,7 +7,7 @@ const StyledInput = styled.input`
     
     width:min(100%,35rem);
     border-radius:0.2rem;
-    padding:1.5rem 1.2rem;
+    padding:1.5rem 1.4rem;
     border-radius:0.4rem;
   };
 `;

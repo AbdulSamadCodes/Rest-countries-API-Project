@@ -3,12 +3,12 @@ import { Input } from '/src/Components/StyledComponents/Input.jsx';
 import search from '/src/assets/search.svg';
 
 function SearchInput() {
-
+   
    return (
       <span className='search-input-container'>
          <Input
             id={'search-input'}
-            className={'search-input shadow-dark component'}
+            className={'shadow-dark component'}
             name={'search-input'}
             placeholder={'Search for country'}
          >
