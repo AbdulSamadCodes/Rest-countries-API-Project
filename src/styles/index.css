@@ -11,6 +11,9 @@
 /* Dashboard */
 
 .dashboard {
+  display:grid;
+  align-content:start;
+  gap:5rem;
   padding-block-start: 12rem;
 }
 
@@ -30,14 +33,17 @@
   transform: translateY(-50%);
 }
 
-/* Loader */
+ /* Loader */
 
 .loader {
   width: 15rem;
   aspect-ratio: 1/1;
-  border-radius:50%;;
   border: 1rem hsl(0, 100%, 100%, 0.3) solid;
-  animation: rotate 3s ease infinite;
+  border-radius:50%;;
+  border-right:hsl(0,100%,100%) solid 1rem;
+  position:relative;
+  margin-inline: auto;
+  animation: rotate 4s ease forwards infinite;
 }
 
 @keyframes rotate {
@@ -45,6 +51,6 @@
       rotate:0deg;
     }
     100% {
-      rotate:180deg;
+      rotate:360deg;
     }
 }
