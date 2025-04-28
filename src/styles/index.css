@@ -1,32 +1,50 @@
 /* Header */
 
 .header {
-  position:fixed;
-  padding:3rem 1rem;
-  text-align:center;
-  left:0;  
-  right:0;
+  position: fixed;
+  padding: 3rem 1rem;
+  text-align: center;
+  left: 0;
+  right: 0;
 }
 
 /* Dashboard */
 
 .dashboard {
-  padding-block-start:12rem;
+  padding-block-start: 12rem;
 }
 
 #search-input {
-  padding-inline-start:5rem;
+  padding-inline-start: 5rem;
 }
 
 .search-input-container {
-  display:block;
+  display: block;
   position: relative;
 }
 
 .search-icon {
   position: absolute;
-  left:1.4rem;
-  top:50%;
-  transform:translateY(-50%);
+  left: 1.4rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
+/* Loader */
+
+.loader {
+  width: 15rem;
+  aspect-ratio: 1/1;
+  border-radius:50%;;
+  border: 1rem hsl(0, 100%, 100%, 0.3) solid;
+  animation: rotate 3s ease infinite;
+}
+
+@keyframes rotate {
+    0% {
+      rotate:0deg;
+    }
+    100% {
+      rotate:180deg;
+    }
+}

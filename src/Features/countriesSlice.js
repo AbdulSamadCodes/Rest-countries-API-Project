@@ -6,7 +6,9 @@ const fetchCountries = createAsyncThunk('fetchCountries', async () => {
   const URL = '/Data/data.json';
 
   const response = await fetch(URL);
-  return response.json();
+  const data =  await response.json();
+
+  return data;
 });
 
 const initialState = {
@@ -21,10 +23,24 @@ const countriesSlice = createSlice({
 
   reducers: {
 
+  },
+
+  extraReducers : (builder) => {
+    builder.addCase(fetchCountries.fulfilled, (state,action) => {
+      state.isLoading = false;
+      state.data = action.payload;
+      state.error = null;
+    });
+    builder.addCase(fetchCountries.rejected, (state) => {
+      state.error = 'Error loading data';
+    });
+    builder.addCase(fetchCountries.pending, (state) => {
+      state.isLoading = true;
+    })
   }
 
  }
 );
 
-export  const countriesReducer = countriesSlice.reducer;
+export const countriesReducer = countriesSlice.reducer;
 export { fetchCountries };
