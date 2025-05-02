@@ -127,6 +127,18 @@ const GlobalStyle = createGlobalStyle`
       color: var(--clr-white)
       font-size: var(--fs-text-primary);
     }
+    
+    .block {
+      display: block;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .absolute {
+      position: absolute;
+    }
 `
 
 export { GlobalStyle };

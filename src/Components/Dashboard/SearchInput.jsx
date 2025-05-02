@@ -5,7 +5,7 @@ import search from '/src/assets/search.svg';
 function SearchInput() {
    
    return (
-      <span className='search-input-container'>
+      <span className='search-input-container block relative'>
          <Input
             id={'search-input'}
             className={'shadow-dark component'}
@@ -14,7 +14,7 @@ function SearchInput() {
          >
          </Input>
 
-         <img className='search-icon' src={search}/>
+         <img className='search-icon absolute' src={search}/>
       </span>
    );
 }
