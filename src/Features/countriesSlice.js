@@ -12,7 +12,7 @@ const fetchCountries = createAsyncThunk('fetchCountries', async () => {
 });
 
 const initialState = {
-  data: null,
+  data: [],
   isLoading: false,
   error: null
 };

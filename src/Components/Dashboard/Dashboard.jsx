@@ -6,21 +6,20 @@ import { fetchCountries } from '/src/Features/countriesSlice.js'
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
-import { Loader } from '/src/Components/Dashboard/Loader.jsx'
+import { Loader } from '/src/Components/Dashboard/Loader.jsx';
 
-function Dashboard() {
-  const data = useSelector((state) => state.data);
+function Dashboard() {  
   const dispatch = useDispatch();
-
+  
   useEffect(() => {
     dispatch(fetchCountries());
-  },[]);
+  }, []);
 
   return (
     <div className='dashboard'>
-        <SearchInput />    
+      <SearchInput />
 
-        <Loader className='loader'/>
+      {/* <Loader className='loader'/> */}
     </div>
   );
 }

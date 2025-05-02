@@ -15,14 +15,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <>
     <GlobalStyle />
 
-    <Provider store={store}>
-      <Container>
+      <Provider store={store}>
+        <Container>
 
-        <RouterProvider router={router}>
-          <App />
-        </RouterProvider>
+          <RouterProvider router={router}>
+            <App />
+          </RouterProvider>
 
-      </Container>
-    </Provider>
+        </Container>
+      </Provider>
+      
   </>
 )
