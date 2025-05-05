@@ -14,7 +14,7 @@ function CountryCard({
         <div className='country-data'>
 
           <span className='text-primary'>
-            { name}
+            { name }
           </span>
 
           <div>
