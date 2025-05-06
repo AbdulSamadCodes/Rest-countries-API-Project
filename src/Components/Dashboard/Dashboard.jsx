@@ -25,13 +25,10 @@ function Dashboard() {
 
       <CountriesGrid>
         {
-          data.map(() => {
-            return (
-              <div className='country-card'>
-                  
-              </div>
-            );
-          })
+          (data.map(( {flags : {svg} , name}) => {
+            console.log(svg)
+            return <CountryCard key={name} flag={svg}/>
+          })) 
         }
       </CountriesGrid>
 

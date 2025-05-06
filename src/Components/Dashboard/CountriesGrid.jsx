@@ -4,7 +4,7 @@ function CountriesGrid( { children } ) {
 
   return (
     
-    <div className='country-grid'>
+    <div className='countries-grid grid'>
       {children}
     </div>
   );        

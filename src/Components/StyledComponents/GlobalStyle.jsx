@@ -8,7 +8,8 @@ const GlobalStyle = createGlobalStyle`
     --fs-normal: 1.4rem;
     --fs-text-primary:2.6rem;
 
-    --bg-component :hsl(209, 23%, 22%);
+    --bg-body: hsl(207, 26%, 17%);
+    --bg-component: hsl(209, 23%, 22%);
 
     --clr-white: hsl(0, 0%, 100%);
 
@@ -74,6 +75,10 @@ const GlobalStyle = createGlobalStyle`
     color:inherit;
    }
 
+   span {
+    display: block;
+   }
+
    input {
      font-size: 1.2rem;
    }
@@ -100,7 +105,7 @@ const GlobalStyle = createGlobalStyle`
    }
 
    body {
-     background-color:hsl(207, 26%, 17%);
+     background-color:var(--bg-body);
      color:var(--clr-white);
      font-family:var(--ff-Nunito_sans);
      font-size:var(--fs-normal);
@@ -115,17 +120,19 @@ const GlobalStyle = createGlobalStyle`
      box-shadow : var(--shadow-dark);
    }
 
-    .mx-auto {
-      margin-inline:auto;
-    }
-
-    .component {
+   .component {
       background-color:var(--bg-component);
-    }
+   }
 
     .text-primary {
       color: var(--clr-white)
       font-size: var(--fs-text-primary);
+    }
+
+    /* utility styles */
+    
+    .mx-auto {
+      margin-inline:auto;
     }
     
     .block {
@@ -138,6 +145,10 @@ const GlobalStyle = createGlobalStyle`
 
     .absolute {
       position: absolute;
+    }
+
+    .grid {
+      display: grid;
     }
 `
 
