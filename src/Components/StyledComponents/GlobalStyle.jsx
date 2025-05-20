@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
     --ff-Nunito_sans : "Nunito Sans", sans-serif;
     --fw-bold:bold;
     --fs-normal: 1.4rem;
-    --fs-text-primary:2.6rem;
+    --fs-text-primary:2rem;
 
     --bg-body: hsl(207, 26%, 17%);
     --bg-component: hsl(209, 23%, 22%);
@@ -125,8 +125,9 @@ const GlobalStyle = createGlobalStyle`
    }
 
     .text-primary {
-      color: var(--clr-white)
       font-size: var(--fs-text-primary);
+      font-weight: bold;
+      color: var(--clr-white)
     }
 
     /* utility styles */
@@ -149,6 +150,21 @@ const GlobalStyle = createGlobalStyle`
 
     .grid {
       display: grid;
+    } 
+    
+    .overflow-hidden {
+      overflow: hidden;  
+    }
+    
+    .w-100 {
+      width : 100%; 
+    }
+
+    .h-100 {
+      height: 100%;
+    }
+    .object-cover {
+      object-fit: cover;
     }
 `
 

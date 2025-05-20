@@ -26,8 +26,7 @@ function Dashboard() {
       <CountriesGrid>
         {
           (data.map(( {flags : {svg} , name}) => {
-            console.log(svg)
-            return <CountryCard key={name} flag={svg}/>
+            return <CountryCard key={name} name={name} flag={svg}/>
           })) 
         }
       </CountriesGrid>

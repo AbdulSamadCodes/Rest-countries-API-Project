@@ -12,13 +12,13 @@
   --loader-loading-color: hsl(0,100%,100%);
   --loader-animation:4s ease forwards infinite;
 
-  --countries-grid-layout : repeat(auto-fit, minmax(200px , 1fr)); 
+  --countries-grid-layout : repeat(auto-fit, minmax(220px , 1fr)); 
 }
+
 
 /* Header */
 
 .header {
-  position: fixed;
   padding: var(--header-spacing);
   left: 0;
   right: 0;
@@ -53,8 +53,16 @@
 
 /* Country card */
 
-.country-card {
+.country-card { 
   border-radius: .5rem;
+}
+
+.country-img {
+  aspect-ratio:16/9;
+}
+
+.country-data {
+    padding:2rem 2.5rem 0;
 }
 
  /* Loader */

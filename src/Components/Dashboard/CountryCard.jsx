@@ -8,9 +8,12 @@ function CountryCard({
   capital }) {
 
   return (
-    <div className='country-card component'>
-      <figure>
-        <img src={flag} />
+    <div className='country-card component grid overflow-hidden'>
+
+      <figure className='country-figure'>
+        <img className='country-img w-100 object-cover' 
+         alt={"Country's flag loading"}
+         src={flag} />
       </figure>
 
       <div className='country-data grid'>
@@ -35,7 +38,7 @@ function CountryCard({
 
         </div>
 
-      </div>
+      </div>  
     </div>
   );
 };
