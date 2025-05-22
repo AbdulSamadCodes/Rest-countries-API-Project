@@ -23,15 +23,15 @@ function Dashboard() {
     <div className='dashboard'>
       <SearchInput />
 
-      <CountriesGrid>
+      <CountriesGrid> 
         {
-          (data.map(( {flags : {svg} , name}) => {
+          (data.slice(0,10).map(( {flags : {svg} , name}) => {
             return <CountryCard key={name} name={name} flag={svg}/>
           })) 
         }
       </CountriesGrid>
 
-      {/* <Loader className='loader'/> */}
+      {/* <Loader className='loader'width={15}/> */}
     </div>
   );
 }

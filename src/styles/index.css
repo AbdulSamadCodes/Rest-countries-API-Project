@@ -7,14 +7,13 @@
   --search-input-inline-padding:5rem;
   --search-icon-left-position: 1.4rem;
 
-  --loader-width: 15rem;
   --loader-bg-color: hsl(0, 100%, 100%, 0.3);
   --loader-loading-color: hsl(0,100%,100%);
   --loader-animation:4s ease forwards infinite;
 
   --countries-grid-layout : repeat(auto-fit, minmax(220px , 1fr)); 
+  --country-card-padding:2rem 2.5rem 3rem 2.5rem; 
 }
-
 
 /* Header */
 
@@ -48,7 +47,7 @@
 
 .countries-grid {
   grid-template-columns : var(--countries-grid-layout); 
-  gap : 1rem;
+  gap : 1.5rem;
 }
 
 /* Country card */
@@ -62,16 +61,21 @@
 }
 
 .country-data {
-    padding:2rem 2.5rem 0;
+  padding:var(--country-card-padding);
+  gap:1rem;
+}
+
+.country-data > div > span + * {
+  margin-block-start: .4rem; 
 }
 
  /* Loader */
 
 .loader {
-  width: var(--loader-width);
   aspect-ratio: 1/1;
-  border: 1rem var(--loader-bg-color) solid;
   border-radius:50%;
+  border-color: var(--loader-bg-color);
+  border-style: solid;
   border-right: 1rem var(--loader-loading-color) solid;
   animation: rotate var(--loader-animation);
 }

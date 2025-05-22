@@ -1,11 +1,12 @@
 import React from 'react';
 
-function Loader() {
+function Loader( {width } ) {
 
   return (
-    <div className='loader mx-auto'>
-
-    </div>    
+    <div className='loader mx-auto' 
+    style={{ 'width' : width.toString() + 'rem'}}>
+      
+    </div>      
   )
 };
 
