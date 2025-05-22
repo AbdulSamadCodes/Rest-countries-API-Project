@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageWithLoader } from '/src/Components/ImageWithLoader.jsx';
+import { useImageWithLoader } from '/src/Components/useImageWithLoader.jsx';
 
 function CountryCard({
   flag,
@@ -12,7 +12,7 @@ function CountryCard({
     <div className='country-card component grid overflow-hidden'>
 
       <figure className='country-figure'>
-        <ImageWithLoader src={flag}/>
+        
       </figure>
     
       <div className='country-data grid'>
