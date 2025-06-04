@@ -20,19 +20,19 @@ function Dashboard() {
   }, []);
 
   return (
-    <div className='dashboard'>
-      <SearchInput />
+      <div className='dashboard'>
+        <SearchInput />
 
-      <CountriesGrid> 
-        {
-          (data.slice(0,10).map(( {flags : {svg} , name}) => {
-            return <CountryCard key={name} name={name} flag={svg}/>
-          })) 
-        }
-      </CountriesGrid>
+        <CountriesGrid>
+          {
+            (data.slice(0, 10).map(({ flags: { svg }, name }) => {
+              return <CountryCard key={name} name={name} flag={svg} />
+            }))
+          }
+        </CountriesGrid>
 
-      {/* <Loader className='loader'width={15}/> */}
-    </div>
+        {/* <Loader className='loader'width={15}/> */}
+      </div>
   );
 }
 

@@ -1,25 +1,23 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import { LoginPage } from '/src/Components/LoginPage.jsx';
-
 import { RootLayout } from '/src/Components/RootLayout.jsx';
 import { Dashboard } from '/src/Components/Dashboard/Dashboard.jsx';
-
+import { Container } from '/src/Components/Container.jsx'
 
 const router = createBrowserRouter(
   [
     {
-      element : <LoginPage/>,
-      path:'/'
-    },
-    {
-      element : <RootLayout/>,
-      path:'dashboard',
+      element: <RootLayout />,
+      path: '/',
       children: [
+
         {
-          index:true,
-          element: <Dashboard/>,
-        }
+          index : true,
+          element : <Container>
+                        <Dashboard/>
+                    </Container>
+        }        
+
       ]
     }
   ]

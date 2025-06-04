@@ -60,8 +60,7 @@
   aspect-ratio:16/9;
 }
 
-.c
-ountry-data {
+.country-data {
   padding:var(--country-card-padding);
   gap:1rem;
 }
