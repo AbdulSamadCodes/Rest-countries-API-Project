@@ -11,7 +11,7 @@
   --loader-loading-color: hsl(0,100%,100%);
   --loader-animation:4s ease forwards infinite;
 
-  --countries-grid-layout : repeat(auto-fit, minmax(220px , 1fr)); 
+  --countries-grid-layout : repeat(auto-fit, minmax(22rem , 1fr)); 
   --country-card-padding:2rem 2.5rem 3rem 2.5rem; 
 }
 
@@ -74,7 +74,7 @@
 .loader {
   aspect-ratio: 1/1;
   border-radius:50%;
-  border-color: var(--loader-bg-color);
+  border:1rem solid var(--loader-bg-color);
   border-style: solid;
   border-right: 1rem var(--loader-loading-color) solid;
   animation: rotate var(--loader-animation);
