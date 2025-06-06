@@ -3,20 +3,31 @@ import { useState, useEffect, useRef } from 'react';
 import { Loader } from '/src/Components/Dashboard/Loader.jsx';
 
 function ImageWithLoader({ src }) {
-   const [imgLoaded, setImgLoaded] = useState(false);
-   const imgRef = useRef(undefined);
+   const [ isImgLoaded , setIsImgLoaded ] = useState(false); 
+   const imgRef = useRef(null);
 
-   const onLoad = () => {
-      setImgLoaded(true);
-   };
+   const onLoad = () => setIsImgLoaded(true);
 
-   useEffect(() => {      
+   useEffect(() => {
+      const img = imgRef.current;
+      
+      if(img && img.complete) {
+         setIsImgLoaded(true);
+      } else {
+         img?.addEventListener('load', onLoad);
 
-   }, []);
+         return () => img?.removeEventListener("load", onLoad);
+      }  
 
-   if (!imgLoaded) return <Loader width={2.5}></Loader>
+   }, [src]);
 
-   return <img className='w-100 country-img' ref={imgRef} src={src} />
+   return (
+      <>
+        { !isImgLoaded && <Loader width={2.5}/>}
+
+        <img className='w-100 country-img' src={src} ref={imgRef}/>
+      </>
+   )
 }
 
 export { ImageWithLoader };
