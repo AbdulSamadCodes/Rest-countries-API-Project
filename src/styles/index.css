@@ -12,7 +12,7 @@
   --loader-animation:4s ease forwards infinite;
 
   --countries-grid-layout : repeat(auto-fit, minmax(22rem , 1fr)); 
-  --country-card-padding:2rem 2.5rem 3rem 2.5rem; 
+  --country-card-padding:2rem 2.3rem 3rem 2.3rem; 
 }
 
 /* Header */
@@ -27,8 +27,7 @@
 /* Dashboard */
 
 .dashboard {
-  display:grid;
-  align-content:start;
+  align-content: start;
   gap:var(--dashboard-gap);
   padding-block-start: var(--dashboard-blockstart-padding);
 }

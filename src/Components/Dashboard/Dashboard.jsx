@@ -20,7 +20,7 @@ function Dashboard() {
   }, []);
 
   return (
-      <div className='dashboard'>
+      <div className='grid dashboard'>
         <SearchInput />
 
         <CountriesGrid>
